@@ -1,0 +1,52 @@
+E:\C#\V-Shop\V-Shop\obj\Debug\V-Shop.csproj.AssemblyReference.cache
+E:\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Properties.Resources.resources
+E:\C#\V-Shop\V-Shop\obj\Debug\V-Shop.csproj.GenerateResource.cache
+E:\C#\V-Shop\V-Shop\obj\Debug\V-Shop.csproj.CoreCompileInputs.cache
+E:\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.LogInForm.resources
+E:\C#\V-Shop\V-Shop\bin\Debug\V-Shop.exe.config
+E:\C#\V-Shop\V-Shop\bin\Debug\V-Shop.exe
+E:\C#\V-Shop\V-Shop\bin\Debug\V-Shop.pdb
+E:\C#\V-Shop\V-Shop\bin\Debug\Guna.UI2.dll
+E:\C#\V-Shop\V-Shop\obj\Debug\V-Shop.csproj.CopyComplete
+E:\C#\V-Shop\V-Shop\obj\Debug\V-Shop.exe
+E:\C#\V-Shop\V-Shop\obj\Debug\V-Shop.pdb
+E:\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.SignUpForm.resources
+E:\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.AdminForm.resources
+E:\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.CustomerForm.resources
+E:\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.DashboardForm.resources
+E:\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.OrderForm.resources
+E:\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.Admin_Form_Component.AnalyticsForm.resources
+E:\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.Admin_Form_Component.ProductForm.resources
+E:\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.Modal.ModalProduct.resources
+E:\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.MainForm.resources
+E:\C#\V-Shop\V-Shop\obj\Debug\V_Shop.View.Modal.ProfileVewModal.resources
+E:\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Data.Product.ProductCardView.resources
+E:\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Data.Product.ProductDetailForm.resources
+E:\C#\V-Shop\V-Shop\obj\Debug\V_Shop.MainFormComponent.CheckOutModalForm.resources
+E:\SRU Y_4\C#\V-Shop\V-Shop\bin\Debug\V-Shop.exe.config
+E:\SRU Y_4\C#\V-Shop\V-Shop\bin\Debug\V-Shop.exe
+E:\SRU Y_4\C#\V-Shop\V-Shop\bin\Debug\V-Shop.pdb
+E:\SRU Y_4\C#\V-Shop\V-Shop\bin\Debug\Guna.UI2.dll
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V-Shop.csproj.AssemblyReference.cache
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.MainFormComponent.CheckOutModalForm.resources
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Data.Product.ProductCardView.resources
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Data.Product.ProductDetailForm.resources
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.AdminForm.resources
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.Admin_Form_Component.AnalyticsForm.resources
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.CustomerForm.resources
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.DashboardForm.resources
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.Admin_Form_Component.ProductForm.resources
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.LogInForm.resources
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.OrderForm.resources
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.MainForm.resources
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.Modal.ModalProduct.resources
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.View.Modal.ProfileVewModal.resources
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.SignUpForm.resources
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Properties.Resources.resources
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V-Shop.csproj.GenerateResource.cache
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V-Shop.csproj.CoreCompileInputs.cache
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V-Shop.csproj.CopyComplete
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V-Shop.exe
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V-Shop.pdb
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.UI.PaymentForm.resources
+E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.UI.InvoiceForm.resources
