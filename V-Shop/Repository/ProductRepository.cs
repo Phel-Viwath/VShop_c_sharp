@@ -20,7 +20,7 @@ namespace V_Shop.Data.Product
             try
             {
                 
-                string query = "INSERT INTO Product (Name, Price_In, Price_Out, Qty, Description, ImageData, Category) " +
+                string query = "INSERT INTO Product (Name, Price_In, Price_Out, Current_qty, Description, ImageData, Category) " +
                        "VALUES(@Name, @PriceIn, @PriceOut, @Qty, @Description, @ImageData, @Category)";
 
                 using (SqlConnection connection = dbHelper.OpenConnection())
@@ -63,7 +63,7 @@ namespace V_Shop.Data.Product
                             Name = Convert.ToString(reader["Name"]),
                             PriceIn = Convert.ToDouble(reader["Price_In"]),
                             PriceOut = Convert.ToDouble(reader["Price_Out"]),
-                            Qty = Convert.ToInt32(reader["Qty"]),
+                            Qty = Convert.ToInt32(reader["Current_qty"]),
                             Description = Convert.ToString(reader["Description"]),
                             ImageData = (byte[])reader["ImageData"],
                             Category = Convert.ToString(reader["Category"]),
@@ -88,7 +88,7 @@ namespace V_Shop.Data.Product
             try
             {
 
-                string query = "SELECT * FROM Product WHERE Qty > 0";
+                string query = "SELECT * FROM Product WHERE Corrent_qty > 0";
                 using (SqlDataReader reader = dbHelper.ExecuteReader(query))
                 {
                     while (reader.Read())
@@ -99,7 +99,7 @@ namespace V_Shop.Data.Product
                             Name = Convert.ToString(reader["Name"]),
                             PriceIn = Convert.ToDouble(reader["Price_In"]),
                             PriceOut = Convert.ToDouble(reader["Price_Out"]),
-                            Qty = Convert.ToInt32(reader["Qty"]),
+                            Qty = Convert.ToInt32(reader["Corrent_qty"]),
                             Description = Convert.ToString(reader["Description"]),
                             ImageData = (byte[])reader["ImageData"],
                             Category = Convert.ToString(reader["Category"]),
@@ -111,7 +111,7 @@ namespace V_Shop.Data.Product
 
             }catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error in get all product in stock" + ex.Message);
                 return null;
             }
         }
@@ -150,7 +150,7 @@ namespace V_Shop.Data.Product
                             Category = Convert.ToString(reader["Category"]),
                             PriceIn = Convert.ToDouble(reader["Price_In"]),
                             PriceOut = Convert.ToDouble(reader["Price_Out"]),
-                            Qty = Convert.ToInt32(reader["Qty"]),
+                            Qty = Convert.ToInt32(reader["Current_qty"]),
                             ImageData = (byte[])reader["ImageData"]  ,
 
                         };
@@ -165,7 +165,7 @@ namespace V_Shop.Data.Product
         // Update Product
         public void UpdateProduct(Product product, int id)
         {
-            string query = $"Update Product Set Name = @Name, Price_In = @PriceIn, Price_Out = @PriceOut, Qty = @Qty," +
+            string query = $"Update Product Set Name = @Name, Price_In = @PriceIn, Price_Out = @PriceOut, Current_qty = @Qty," +
                 $"Description = @Description, Category = @Category, ImageData = @ImageData Where Id = '{id}'";
             try
             {
@@ -192,8 +192,8 @@ namespace V_Shop.Data.Product
        
         public void BuyProduct(int product_id, int buyQty)
         {
-            string updateQuery = $"Update Product Set Qty = @Qty Where Id = '{product_id}'";
-            string selectQtyQuery = $"SELECT Qty FROM Product WHERE Id = {product_id}";
+            string updateQuery = $"Update Product Set Current_qty = @Qty Where Id = '{product_id}'";
+            string selectQtyQuery = $"SELECT Current_qty FROM Product WHERE Id = {product_id}";
 
             try
             {
@@ -201,7 +201,7 @@ namespace V_Shop.Data.Product
                 {
                     if (reader.Read())
                     {
-                        qty = Convert.ToInt32(reader["Qty"]);
+                        qty = Convert.ToInt32(reader["Current_qty"]);
                     }
                 }
 

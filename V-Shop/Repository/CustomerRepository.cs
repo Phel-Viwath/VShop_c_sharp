@@ -9,7 +9,7 @@ using V_Shop.Data.Model.Cutomers;
 
 namespace V_Shop.Repository
 {
-    public class CutomerRepository
+    public class CustomerRepository
     {
         private DatabaseHelper dbHelper = new DatabaseHelper();
 

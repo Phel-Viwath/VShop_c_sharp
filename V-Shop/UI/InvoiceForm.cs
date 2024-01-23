@@ -11,12 +11,21 @@ using V_Shop.Data.Product;
 using V_Shop.Repository;
 using V_Shop.Data.Model;
 using V_Shop.Data.Model.Cutomers;
+using V_Shop.MainFormComponent;
+using V_Shop.Presentation;
 
 namespace V_Shop.UI
 {
     public partial class InvoiceForm : Form
     {
-        private CashierRepository _repository;
+        // Repository
+        private readonly CashierRepository _cashierRepository;
+        private readonly CustomerRepository _customerRepository;
+
+      
+
+
+        //
         private Customer _customer;
         private List<ProductInCard> _product;
         private string total;
@@ -30,13 +39,14 @@ namespace V_Shop.UI
         public InvoiceForm()
         {
             InitializeComponent();
-            _repository = new CashierRepository();
+            _cashierRepository = new CashierRepository();
+            
         }
 
         public InvoiceForm(List<ProductInCard> products, Customer customer, string subtotal, string total, string shipping, string discount)
         {
             InitializeComponent();
-            _repository = new CashierRepository();
+            _cashierRepository = new CashierRepository();
             _product = products;
             _customer = customer;
             this.subtotal = subtotal;
@@ -47,6 +57,7 @@ namespace V_Shop.UI
 
         private void InvoiceForm_Load(object sender, EventArgs e)
         {
+            
             dataGridViewProducts.DataSource = _product;
             lbCusFirstName.Text = _customer.FirstName;
             lbCusLastName.Text = _customer.LastName;
@@ -59,7 +70,7 @@ namespace V_Shop.UI
             lbDiscount.Text = discount;
             lbTotal.Text = total;
 
-            cashierName = _repository.GetAllCashierName();
+            cashierName = _cashierRepository.GetAllCashierName();
             foreach(string name in cashierName)
             {
                 cboCashierName.Items.Add(name);
@@ -68,7 +79,7 @@ namespace V_Shop.UI
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
 
         private void btnOkay_Click(object sender, EventArgs e)
@@ -76,6 +87,10 @@ namespace V_Shop.UI
             
         }
 
-       
+        private void InvoiceForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
+        }
     }
 }

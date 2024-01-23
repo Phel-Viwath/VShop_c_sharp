@@ -56,10 +56,19 @@
     <Compile Include="Data\Datasource\DatabaseHelper.cs" />
     <Compile Include="Data\Model\Chasier.cs" />
     <Compile Include="Data\Model\Cutomers\Customer.cs" />
+    <Compile Include="Data\Model\Order\OrderItem.cs" />
+    <Compile Include="Data\Model\Order\Order.cs" />
     <Compile Include="Data\Model\Product\Product.cs" />
     <Compile Include="Data\Model\Product\ProductInCard.cs" />
+    <Compile Include="Data\Model\Transactions\Transaction.cs" />
     <Compile Include="Data\Model\User\Users.cs" />
     <Compile Include="Repository\CashierRepository.cs" />
+    <Compile Include="Repository\IOrderItemsRepository.cs" />
+    <Compile Include="Repository\ITransactionRepository.cs" />
+    <Compile Include="Repository\RepositoryImp\OrderItemsRepositoryImp.cs" />
+    <Compile Include="Repository\RepositoryImp\OrderRepositoryImp.cs" />
+    <Compile Include="Repository\IOrderRepository.cs" />
+    <Compile Include="Repository\RepositoryImp\TransactionRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="UI\InvoiceForm.cs">
       <SubType>Form</SubType>
@@ -156,7 +165,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\Model\User\AccountType.cs" />
-    <Compile Include="Repository\CutomerRepository.cs" />
+    <Compile Include="Repository\CustomerRepository.cs" />
     <Compile Include="UI\PaymentForm.cs">
       <SubType>Form</SubType>
     </Compile>

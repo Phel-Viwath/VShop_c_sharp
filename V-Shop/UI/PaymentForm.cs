@@ -23,6 +23,8 @@ namespace V_Shop.UI
         private string shipping;
         private string discount;
 
+        private bool isDirectPay;
+
 
         public PaymentForm()
         {
