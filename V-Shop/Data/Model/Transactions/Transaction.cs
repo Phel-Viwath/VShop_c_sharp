@@ -12,6 +12,7 @@ namespace V_Shop.Data.Model.Transactions
         private int productId;
         private string transactionType;
         private int qty;
+        private double pouchesPrice;
         private DateTime transactionDate;
 
         public int TransactionId 
@@ -38,6 +39,11 @@ namespace V_Shop.Data.Model.Transactions
         {
             get { return transactionDate; }
             set { transactionDate = value; }
+        }
+        public double PouchesPrice
+        {
+            get { return pouchesPrice; }
+            set { pouchesPrice = value; }
         }
     }
 }

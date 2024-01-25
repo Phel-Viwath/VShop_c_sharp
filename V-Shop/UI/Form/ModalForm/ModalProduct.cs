@@ -89,8 +89,7 @@ namespace V_Shop.Presentation.Modal
                     Product product = new Product
                     {
                         Name = txtProductName.Text,
-                        PriceIn = double.Parse(txtPriceIn.Text),
-                        PriceOut = double.Parse(txtPriceOut.Text),
+                        SalePrice = double.Parse(txtSalePrice.Text),
                         Qty = int.Parse(txtQty.Text),
                         Description = txtDescription.Text,
                         ImageData = ConvertImageToByteArray(),
@@ -112,14 +111,13 @@ namespace V_Shop.Presentation.Modal
             }
             else
             {
-                // Save 
+                ////// Save the product
                 try
                 {
                     Product product = new Product
                     {
                         Name = txtProductName.Text,
-                        PriceIn = double.Parse(txtPriceIn.Text),
-                        PriceOut = double.Parse(txtPriceOut.Text),
+                        SalePrice = double.Parse(txtSalePrice.Text),
                         Qty = int.Parse(txtQty.Text),
                         Description = txtDescription.Text,
                         ImageData = ConvertImageToByteArray(),
@@ -136,8 +134,8 @@ namespace V_Shop.Presentation.Modal
                     if (result == DialogResult.Yes)
                     {
                         txtProductName.Clear();
-                        txtPriceIn.Clear();
-                        txtPriceOut.Clear();
+                        txtPouchesPrice.Clear();
+                        txtSalePrice.Clear();
                         txtQty.Clear();
                         txtDescription.Clear();
                         comboCategory.Text = String.Empty;
@@ -165,8 +163,7 @@ namespace V_Shop.Presentation.Modal
                 Product product = repository.GetProduct(_id);
                 txtProductName.Text = product.Name;
                 txtDescription.Text = product.Description;
-                txtPriceIn.Text = product.PriceIn.ToString();
-                txtPriceOut.Text = product.PriceOut.ToString();
+                txtSalePrice.Text = product.SalePrice.ToString();
                 txtQty.Text = product.Qty.ToString();
                 comboCategory.Text = product.Category.ToString();
 

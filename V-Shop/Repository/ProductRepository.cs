@@ -20,7 +20,7 @@ namespace V_Shop.Data.Product
             try
             {
                 
-                string query = "INSERT INTO Product (Name, Price_In, Price_Out, Current_qty, Description, ImageData, Category) " +
+                string query = "INSERT INTO Product (Name, Sale_price, Current_qty, Description, ImageData, Category) " +
                        "VALUES(@Name, @PriceIn, @PriceOut, @Qty, @Description, @ImageData, @Category)";
 
                 using (SqlConnection connection = dbHelper.OpenConnection())
@@ -28,8 +28,7 @@ namespace V_Shop.Data.Product
                     using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
                         cmd.Parameters.AddWithValue("@Name", product.Name);
-                        cmd.Parameters.AddWithValue("@PriceIn", product.PriceIn);
-                        cmd.Parameters.AddWithValue("@PriceOut", product.PriceOut);
+                        cmd.Parameters.AddWithValue("@PriceOut", product.SalePrice);
                         cmd.Parameters.AddWithValue("@Qty", product.Qty);
                         cmd.Parameters.AddWithValue("@Description", product.Description);
                         cmd.Parameters.AddWithValue("@ImageData", product.ImageData);
@@ -61,9 +60,8 @@ namespace V_Shop.Data.Product
                         {
                             Id = Convert.ToInt32(reader["Id"]),
                             Name = Convert.ToString(reader["Name"]),
-                            PriceIn = Convert.ToDouble(reader["Price_In"]),
-                            PriceOut = Convert.ToDouble(reader["Price_Out"]),
-                            Qty = Convert.ToInt32(reader["Current_qty"]),
+                            SalePrice = Convert.ToDouble(reader["Sale_price"]),
+                            Qty = Convert.ToInt32(reader["Corrent_qty"]),
                             Description = Convert.ToString(reader["Description"]),
                             ImageData = (byte[])reader["ImageData"],
                             Category = Convert.ToString(reader["Category"]),
@@ -75,7 +73,7 @@ namespace V_Shop.Data.Product
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error in get all product" + ex.Message);
                 return null;
             }
         }
@@ -97,8 +95,7 @@ namespace V_Shop.Data.Product
                         {
                             Id = Convert.ToInt32(reader["Id"]),
                             Name = Convert.ToString(reader["Name"]),
-                            PriceIn = Convert.ToDouble(reader["Price_In"]),
-                            PriceOut = Convert.ToDouble(reader["Price_Out"]),
+                            SalePrice = Convert.ToDouble(reader["Sale_price"]),
                             Qty = Convert.ToInt32(reader["Corrent_qty"]),
                             Description = Convert.ToString(reader["Description"]),
                             ImageData = (byte[])reader["ImageData"],
@@ -148,9 +145,8 @@ namespace V_Shop.Data.Product
                             Name = Convert.ToString(reader["Name"]),
                             Description = Convert.ToString(reader["Description"]),
                             Category = Convert.ToString(reader["Category"]),
-                            PriceIn = Convert.ToDouble(reader["Price_In"]),
-                            PriceOut = Convert.ToDouble(reader["Price_Out"]),
-                            Qty = Convert.ToInt32(reader["Current_qty"]),
+                            SalePrice = Convert.ToDouble(reader["Sale_price"]),
+                            Qty = Convert.ToInt32(reader["Corrent_qty"]),
                             ImageData = (byte[])reader["ImageData"]  ,
 
                         };
@@ -165,7 +161,7 @@ namespace V_Shop.Data.Product
         // Update Product
         public void UpdateProduct(Product product, int id)
         {
-            string query = $"Update Product Set Name = @Name, Price_In = @PriceIn, Price_Out = @PriceOut, Current_qty = @Qty," +
+            string query = $"Update Product Set Name = @Name, Sale_price = @PriceOut, Current_qty = @Qty," +
                 $"Description = @Description, Category = @Category, ImageData = @ImageData Where Id = '{id}'";
             try
             {
@@ -174,8 +170,7 @@ namespace V_Shop.Data.Product
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@Name", product.Name);
-                        cmd.Parameters.AddWithValue("@PriceIn", product.PriceIn);
-                        cmd.Parameters.AddWithValue("@PriceOut", product.PriceOut);
+                        cmd.Parameters.AddWithValue("@PriceOut", product.SalePrice);
                         cmd.Parameters.AddWithValue("@Qty", product.Qty);
                         cmd.Parameters.AddWithValue("@Description", product.Description);
                         cmd.Parameters.AddWithValue("@ImageData", product.ImageData);

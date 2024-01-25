@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModalProduct));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtPriceOut = new System.Windows.Forms.TextBox();
+            this.txtSalePrice = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BtSaveProduct = new Guna.UI2.WinForms.Guna2Button();
@@ -41,7 +41,7 @@
             this.pictureBoxProduct = new System.Windows.Forms.PictureBox();
             this.btCancel = new Guna.UI2.WinForms.Guna2Button();
             this.txtDescription = new System.Windows.Forms.TextBox();
-            this.txtPriceIn = new System.Windows.Forms.TextBox();
+            this.txtPouchesPrice = new System.Windows.Forms.TextBox();
             this.txtQty = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
-            this.panel3.Controls.Add(this.txtPriceOut);
+            this.panel3.Controls.Add(this.txtSalePrice);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.BtSaveProduct);
@@ -66,7 +66,7 @@
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Controls.Add(this.btCancel);
             this.panel3.Controls.Add(this.txtDescription);
-            this.panel3.Controls.Add(this.txtPriceIn);
+            this.panel3.Controls.Add(this.txtPouchesPrice);
             this.panel3.Controls.Add(this.txtQty);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
@@ -79,14 +79,14 @@
             this.panel3.Size = new System.Drawing.Size(663, 674);
             this.panel3.TabIndex = 8;
             // 
-            // txtPriceOut
+            // txtSalePrice
             // 
-            this.txtPriceOut.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPriceOut.Font = new System.Drawing.Font("Calibri", 16.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPriceOut.Location = new System.Drawing.Point(165, 311);
-            this.txtPriceOut.Name = "txtPriceOut";
-            this.txtPriceOut.Size = new System.Drawing.Size(288, 42);
-            this.txtPriceOut.TabIndex = 20;
+            this.txtSalePrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSalePrice.Font = new System.Drawing.Font("Calibri", 16.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalePrice.Location = new System.Drawing.Point(165, 311);
+            this.txtSalePrice.Name = "txtSalePrice";
+            this.txtSalePrice.Size = new System.Drawing.Size(288, 42);
+            this.txtSalePrice.TabIndex = 20;
             // 
             // label7
             // 
@@ -94,9 +94,9 @@
             this.label7.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(15, 318);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 28);
+            this.label7.Size = new System.Drawing.Size(101, 28);
             this.label7.TabIndex = 19;
-            this.label7.Text = "Price Out";
+            this.label7.Text = "Sale Price";
             // 
             // label1
             // 
@@ -224,14 +224,14 @@
             this.txtDescription.Size = new System.Drawing.Size(288, 42);
             this.txtDescription.TabIndex = 7;
             // 
-            // txtPriceIn
+            // txtPouchesPrice
             // 
-            this.txtPriceIn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPriceIn.Font = new System.Drawing.Font("Calibri", 16.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPriceIn.Location = new System.Drawing.Point(165, 242);
-            this.txtPriceIn.Name = "txtPriceIn";
-            this.txtPriceIn.Size = new System.Drawing.Size(288, 42);
-            this.txtPriceIn.TabIndex = 6;
+            this.txtPouchesPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPouchesPrice.Font = new System.Drawing.Font("Calibri", 16.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPouchesPrice.Location = new System.Drawing.Point(165, 242);
+            this.txtPouchesPrice.Name = "txtPouchesPrice";
+            this.txtPouchesPrice.Size = new System.Drawing.Size(288, 42);
+            this.txtPouchesPrice.TabIndex = 6;
             // 
             // txtQty
             // 
@@ -258,9 +258,9 @@
             this.label4.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(15, 249);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 28);
+            this.label4.Size = new System.Drawing.Size(141, 28);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Price In";
+            this.label4.Text = "Pouches Price";
             // 
             // label3
             // 
@@ -317,7 +317,7 @@
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2Button btCancel;
         private System.Windows.Forms.TextBox txtDescription;
-        private System.Windows.Forms.TextBox txtPriceIn;
+        private System.Windows.Forms.TextBox txtPouchesPrice;
         private System.Windows.Forms.TextBox txtQty;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -331,7 +331,7 @@
         private Guna.UI2.WinForms.Guna2Button BtSaveProduct;
         private System.Windows.Forms.PictureBox pictureBoxProduct;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtPriceOut;
+        private System.Windows.Forms.TextBox txtSalePrice;
         private System.Windows.Forms.Label label7;
     }
 }

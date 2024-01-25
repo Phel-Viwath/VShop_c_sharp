@@ -50,3 +50,30 @@ E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V-Shop.exe
 E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V-Shop.pdb
 E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.UI.PaymentForm.resources
 E:\SRU Y_4\C#\V-Shop\V-Shop\obj\Debug\V_Shop.UI.InvoiceForm.resources
+E:\My_Project\C#\V-Shop\V-Shop\bin\Debug\V-Shop.exe.config
+E:\My_Project\C#\V-Shop\V-Shop\bin\Debug\V-Shop.exe
+E:\My_Project\C#\V-Shop\V-Shop\bin\Debug\V-Shop.pdb
+E:\My_Project\C#\V-Shop\V-Shop\bin\Debug\Guna.UI2.dll
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V-Shop.csproj.AssemblyReference.cache
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V_Shop.UI.InvoiceForm.resources
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V_Shop.MainFormComponent.CheckOutModalForm.resources
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Data.Product.ProductCardView.resources
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Data.Product.ProductDetailForm.resources
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.AdminForm.resources
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.Admin_Form_Component.AnalyticsForm.resources
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.CustomerForm.resources
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.DashboardForm.resources
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.Admin_Form_Component.ProductForm.resources
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.LogInForm.resources
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.OrderForm.resources
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.MainForm.resources
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.Modal.ModalProduct.resources
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V_Shop.View.Modal.ProfileVewModal.resources
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Presentation.SignUpForm.resources
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V_Shop.Properties.Resources.resources
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V_Shop.UI.PaymentForm.resources
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V-Shop.csproj.GenerateResource.cache
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V-Shop.csproj.CoreCompileInputs.cache
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V-Shop.csproj.CopyComplete
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V-Shop.exe
+E:\My_Project\C#\V-Shop\V-Shop\obj\Debug\V-Shop.pdb

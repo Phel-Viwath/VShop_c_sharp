@@ -35,7 +35,7 @@ namespace V_Shop.Data.Product
             LabelDescription.Text = product.Description;
             LabelName.Text = $"Name: {product.Name}";
             LabelStock.Text = $"In Stock: {product.Qty}";
-            LabelPrice.Text = $"Price: ${product.PriceOut}";
+            LabelPrice.Text = $"Price: ${product.SalePrice}";
             pictureBoxProduct.Image = ConvertByteArrayToImage(product.ImageData);
         }
 
@@ -73,7 +73,7 @@ namespace V_Shop.Data.Product
                     int.Parse(txtTotalQty.Text),
                     product.Name,
                     product.Description,
-                    product.PriceOut
+                    product.SalePrice
                 );
             }else
                 MessageBox.Show("Error: MainForm instance not found.");

@@ -31,7 +31,7 @@ namespace V_Shop.Data.Product
 
             this.Margin = new Padding(10);
             labelName.Text = $"Name: {product.Name}";
-            labelPrice.Text = $"Price: {product.PriceOut:C}";
+            labelPrice.Text = $"Price: {product.SalePrice:C}";
             pictureBoxProduct.Image = ConvertByteArrayToImage(product.ImageData);
             
         }

@@ -12,8 +12,7 @@ namespace V_Shop.Data.Product
         private string _name;
         private string _description;
         private string _category;
-        private double _price_in;
-        private double _price_out;
+        private double _salePrice;
         private int _qty;
         private byte[] _imageData;
 
@@ -41,16 +40,11 @@ namespace V_Shop.Data.Product
             set { _category = value; }
         }
 
-        public double PriceIn
-        {
-            get { return _price_in; }
-            set { _price_in = value; }
-        }
 
-        public double PriceOut
+        public double SalePrice
         {
-            get { return _price_out; }
-            set { _price_out = value; }
+            get { return _salePrice; }
+            set { _salePrice = value; }
         }
 
         public int Qty
