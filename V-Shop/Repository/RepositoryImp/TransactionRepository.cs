@@ -18,7 +18,7 @@ namespace V_Shop.Repository.RepositoryImp
 
         public void AddTransaction(Transaction transaction)
         {
-            string query = "Instert into ";
+            string query = "Instert into Transactions";
         }
 
         public void DeleteTransaction(int id)
