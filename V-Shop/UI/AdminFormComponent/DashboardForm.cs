@@ -14,12 +14,12 @@ namespace V_Shop.Presentation
     public partial class DashboardForm : Form
     {
 
-        private ProductRepository repository;
+        private ProductRepositoryImp repository;
 
         public DashboardForm()
         {
             InitializeComponent();
-            repository = new ProductRepository();
+            repository = new ProductRepositoryImp();
         }
 
         private void DashboardForm_Load(object sender, EventArgs e)

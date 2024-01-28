@@ -22,13 +22,13 @@ namespace V_Shop.Presentation.Modal
         public static ModalProduct instance;
         private int _id;
         private string _notice;
-        private ProductRepository repository;
+        private ProductRepositoryImp repository;
 
         public ModalProduct()
         {
             InitializeComponent();
             instance = this;
-            repository = new ProductRepository();
+            repository = new ProductRepositoryImp();
             SetRoundForm();
         }
 
@@ -37,7 +37,7 @@ namespace V_Shop.Presentation.Modal
             InitializeComponent();
             _id = id;
             _notice = notice;
-            repository = new ProductRepository();
+            repository = new ProductRepositoryImp();
             SetRoundForm();
         }
 

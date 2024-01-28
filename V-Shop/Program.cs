@@ -17,8 +17,8 @@ namespace V_Shop.Presentation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new LogInForm());
-            Application.Run(new MainForm());
+            Application.Run(new LogInForm());
+            //Application.Run(new MainForm());
             //Application.Run(new AdminForm());
         }
     }

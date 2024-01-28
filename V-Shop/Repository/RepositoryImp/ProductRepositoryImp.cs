@@ -6,10 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using V_Shop.Repository;
 
 namespace V_Shop.Data.Product
 {
-    public class ProductRepository
+    public class ProductRepositoryImp: IProductRepository
     {
         private DatabaseHelper dbHelper = new DatabaseHelper();
         private int qty;

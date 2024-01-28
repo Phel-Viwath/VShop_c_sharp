@@ -24,7 +24,7 @@ namespace V_Shop.Presentation
         // Object 
         private AdminForm adminForm;
         private SignUpForm signUpForm;
-        private readonly ProductRepository repository;
+        private readonly ProductRepositoryImp repository;
 
         // User data fields
         private string role;
@@ -49,7 +49,7 @@ namespace V_Shop.Presentation
         public MainForm()
         {
             InitializeComponent();
-            repository = new ProductRepository();
+            repository = new ProductRepositoryImp();
         }
 
         // Constructor
@@ -58,7 +58,7 @@ namespace V_Shop.Presentation
             InitializeComponent();
             this.role = role;
             this.userID = id;
-            repository = new ProductRepository();
+            repository = new ProductRepositoryImp();
         }
 
         // Properties
@@ -365,8 +365,24 @@ namespace V_Shop.Presentation
                 totalPay += total;
             }
 
-            lbSubTotal.Text = $"{totalPay} $";
-            lbTotal.Text = $"{totalPay} $";
+            lbSubTotal.Text = $"${totalPay}";
+            lbTotal.Text = $"${totalPay} ";
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

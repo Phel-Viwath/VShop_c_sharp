@@ -12,7 +12,7 @@ namespace V_Shop.Data.Model.Transactions
         private int productId;
         private string transactionType;
         private int qty;
-        private double pouchesPrice;
+        private double price;
         private DateTime transactionDate;
 
         public int TransactionId 
@@ -42,8 +42,8 @@ namespace V_Shop.Data.Model.Transactions
         }
         public double PouchesPrice
         {
-            get { return pouchesPrice; }
-            set { pouchesPrice = value; }
+            get { return price; }
+            set { price = value; }
         }
     }
 }

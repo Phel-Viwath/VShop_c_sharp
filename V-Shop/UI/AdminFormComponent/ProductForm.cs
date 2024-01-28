@@ -18,7 +18,7 @@ namespace V_Shop.Presentation.Admin_Form_Component
     {
         public static ProductForm instance;
         private DatabaseHelper dbHelper;
-        private ProductRepository repository;
+        private ProductRepositoryImp repository;
         
         
         /// Constructor
@@ -26,7 +26,7 @@ namespace V_Shop.Presentation.Admin_Form_Component
         {
             InitializeComponent();
             dbHelper = new DatabaseHelper();
-            repository = new ProductRepository();
+            repository = new ProductRepositoryImp();
             instance = this;
         }
         private void ProductForm_Load(object sender, EventArgs e)
@@ -70,8 +70,8 @@ namespace V_Shop.Presentation.Admin_Form_Component
 
         private void dataGridViewProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewColumn updateColumn = dataGridViewProduct.Columns[7];
-            DataGridViewColumn deleteColumn = dataGridViewProduct.Columns[8];
+            DataGridViewColumn updateColumn = dataGridViewProduct.Columns[6];
+            DataGridViewColumn deleteColumn = dataGridViewProduct.Columns[7];
             if(e.RowIndex >= 0 && e.ColumnIndex >= 0) 
             {
                 if (e.ColumnIndex == deleteColumn.Index)
