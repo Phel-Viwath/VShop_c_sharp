@@ -12,7 +12,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using V_Shop.Data.Product;
+using V_Shop.Data.Model.Transactions;
 using V_Shop.Presentation.Admin_Form_Component;
+using V_Shop.Repository.RepositoryImp;
 
 namespace V_Shop.Presentation.Modal
 {
@@ -22,13 +24,15 @@ namespace V_Shop.Presentation.Modal
         public static ModalProduct instance;
         private int _id;
         private string _notice;
-        private ProductRepositoryImp repository;
+        private ProductRepositoryImp productRepository;
+        private TransactionRepositoryImp transactionRepository;
 
         public ModalProduct()
         {
             InitializeComponent();
             instance = this;
-            repository = new ProductRepositoryImp();
+            productRepository = new ProductRepositoryImp();
+            transactionRepository = new TransactionRepositoryImp();
             SetRoundForm();
         }
 
@@ -37,7 +41,8 @@ namespace V_Shop.Presentation.Modal
             InitializeComponent();
             _id = id;
             _notice = notice;
-            repository = new ProductRepositoryImp();
+            productRepository = new ProductRepositoryImp();
+            transactionRepository = new TransactionRepositoryImp();
             SetRoundForm();
         }
 
@@ -99,7 +104,7 @@ namespace V_Shop.Presentation.Modal
                     DialogResult result = MessageBox.Show("Are you sure?", "Comfermation", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
                     {
-                        repository.UpdateProduct(product, _id);
+                        productRepository.UpdateProduct(product, _id);
                         this.Close();
                     }
                     else { }
@@ -123,8 +128,20 @@ namespace V_Shop.Presentation.Modal
                         ImageData = ConvertImageToByteArray(),
                         Category = comboCategory.Text
                     };
-                    repository.Save(product);
+                    productRepository.Save(product);
 
+                    int lastId = productRepository.GetLastProductID();
+
+
+                    Transaction ts = new Transaction
+                    {
+                        ProductId = lastId,
+                        PouchesPrice = double.Parse(txtPouchesPrice.Text),
+                        Qty = int.Parse(txtQty.Text),
+                        TransactionType = "Pouches",
+                        TransactionDate = DateTime.Now,
+                    };
+                    transactionRepository.AddTransaction(ts);
 
                     DialogResult result = MessageBox.Show(
                         "Add more?",
@@ -160,7 +177,7 @@ namespace V_Shop.Presentation.Modal
                 
                 BtSaveProduct.Text = "Update";
 
-                Product product = repository.GetProduct(_id);
+                Product product = productRepository.GetProduct(_id);
                 txtProductName.Text = product.Name;
                 txtDescription.Text = product.Description;
                 txtSalePrice.Text = product.SalePrice.ToString();

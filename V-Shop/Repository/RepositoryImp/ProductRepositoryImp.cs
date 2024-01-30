@@ -21,8 +21,8 @@ namespace V_Shop.Data.Product
             try
             {
                 
-                string query = "INSERT INTO Product (Name, Sale_price, Current_qty, Description, ImageData, Category) " +
-                       "VALUES(@Name, @PriceIn, @PriceOut, @Qty, @Description, @ImageData, @Category)";
+                string query = "INSERT INTO Product (Name, Sale_price, Corrent_qty, Description, ImageData, Category) " +
+                       "VALUES(@Name, @PriceOut, @Current_qty, @Description, @ImageData, @Category)";
 
                 using (SqlConnection connection = dbHelper.OpenConnection())
                 {
@@ -30,7 +30,7 @@ namespace V_Shop.Data.Product
                     {
                         cmd.Parameters.AddWithValue("@Name", product.Name);
                         cmd.Parameters.AddWithValue("@PriceOut", product.SalePrice);
-                        cmd.Parameters.AddWithValue("@Qty", product.Qty);
+                        cmd.Parameters.AddWithValue("@Current_qty", product.Qty);
                         cmd.Parameters.AddWithValue("@Description", product.Description);
                         cmd.Parameters.AddWithValue("@ImageData", product.ImageData);
                         cmd.Parameters.AddWithValue("@Category", product.Category);
@@ -216,7 +216,26 @@ namespace V_Shop.Data.Product
             }
         }
 
-
-
+        /// Select the last id from table product
+        public int GetLastProductID()
+        {
+            string query = "SELECT IDENT_CURRENT('Product') AS last_id";
+            int lastId = 0;
+            try
+            {
+                using(SqlDataReader r = dbHelper.ExecuteReader(query))
+                {
+                    if (r.Read())
+                    {
+                        lastId = Convert.ToInt32(r[0]);
+                    }
+                }
+                return lastId;
+            }catch (Exception ex)
+            {
+                MessageBox.Show ("Error when get last ID From table product" + ex.Message);
+                return -1;
+            }
+        }
     }
 }

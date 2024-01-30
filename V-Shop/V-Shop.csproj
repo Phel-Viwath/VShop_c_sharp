@@ -69,7 +69,7 @@
     <Compile Include="Repository\RepositoryImp\OrderItemsRepositoryImp.cs" />
     <Compile Include="Repository\RepositoryImp\OrderRepositoryImp.cs" />
     <Compile Include="Repository\IOrderRepository.cs" />
-    <Compile Include="Repository\RepositoryImp\TransactionRepository.cs" />
+    <Compile Include="Repository\RepositoryImp\TransactionRepositoryImp.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="UI\InvoiceForm.cs">
       <SubType>Form</SubType>

@@ -16,5 +16,6 @@ namespace V_Shop.Repository
         Product GetProduct(int id);
         void UpdateProduct(Product product, int id);
         void BuyProduct(int product_id, int buyQty);
+        int GetLastProductID();
     }
 }

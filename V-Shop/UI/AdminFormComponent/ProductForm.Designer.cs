@@ -166,7 +166,7 @@
             // qtyDataGridViewTextBoxColumn
             // 
             this.qtyDataGridViewTextBoxColumn.DataPropertyName = "Qty";
-            this.qtyDataGridViewTextBoxColumn.HeaderText = "Qty";
+            this.qtyDataGridViewTextBoxColumn.HeaderText = "Current Qty";
             this.qtyDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.qtyDataGridViewTextBoxColumn.Name = "qtyDataGridViewTextBoxColumn";
             this.qtyDataGridViewTextBoxColumn.Width = 170;
